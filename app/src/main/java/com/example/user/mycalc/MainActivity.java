@@ -17,18 +17,28 @@ public class MainActivity extends Activity {
     EditText etName1,etName2;
     Button btn1,btn2,btn3,btn4,btn5;
     TextView tvName;
+    int num1,num2, result;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setTitle("=초간단계산기=");
+
+        etName1 =(EditText) findViewById(R.id.etName1);
+        num1 = Integer.parseInt(etName1.toString());
+        etName2 =(EditText) findViewById(R.id.etName2);
+        num2 = Integer.parseInt(etName2.toString());
+        result = num1 + num2;
+        result = num1 - num2;
+        result = num1 * num2;
+        result = num1 / num2;
+        result = num1 % num2;
+
         btn1 = (Button) findViewById(R.id.btn1);
         btn2 = (Button) findViewById(R.id.btn2);
         btn3 = (Button) findViewById(R.id.btn3);
         btn4 = (Button) findViewById(R.id.btn4);
         btn5 = (Button) findViewById(R.id.btn5);
-        etName1 =(EditText) findViewById(R.id.etName1);
-        etName2 =(EditText) findViewById(R.id.etName2);
         tvName =(TextView) findViewById(R.id.tvName);
 
     }
